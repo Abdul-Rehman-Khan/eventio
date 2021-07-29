@@ -7,6 +7,7 @@ import EventItemCard from './EventItemCard'
 // import filterEventsByCategory from '../utils/filterEventsByCategory'
 import {BP} from '../../styles/constants'
 import {EventListViewMode} from '../../utils/helper-functions'
+import Loader from '../shared/Loader'
 
 const EventList = ({events, loading, viewMode, action, setActionTriggered}): JSX.Element => {
   // const {itemsLoading, items, category, viewMode} = useSelector((state: RootState) => state.events)
@@ -17,7 +18,7 @@ const EventList = ({events, loading, viewMode, action, setActionTriggered}): JSX
       viewMode={viewMode}
     >
       {loading ? (
-        <img src="/icons/spinner-dark.svg" alt="Loading ..." />
+        <Loader />
       ) : (
         events.map(eventItem =>
           viewMode === 'grid' ? (
