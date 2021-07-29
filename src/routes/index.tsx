@@ -1,4 +1,4 @@
-import {useContext, lazy, Suspense, useEffect, useState, FC} from 'react'
+import {useContext, lazy, Suspense, useEffect, useState} from 'react'
 import {AuthContext} from '../context/authContext'
 import {getRefreshToken} from '../context/local-storage'
 import Api from '../api/index'
